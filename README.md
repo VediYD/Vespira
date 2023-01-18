@@ -44,6 +44,7 @@ The table structure decided upon is rather simplistic and similar to more tradit
 7. collections do not enforce a schema, and same collection can have different fields
 8. aggregation pipelines - sequential operations(many different operation types 150), similar to sql queries
 9. allows monitorying using javascript - potential opportunity to setup monitoring of resource usage
+10. access to the database is user-specific, each db has its own set of users
 
 ### migration notes
 
