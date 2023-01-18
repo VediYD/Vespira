@@ -1,0 +1,40 @@
+{
+  "name": "node_vesprira",
+  "version": "0.0.1",
+  "description": "Main project for SIT725",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VediYD/Vespira.git"
+  },
+  "keywords": [
+    "express",
+    "materialize",
+    "rest",
+    "api",
+    "pain-assessment",
+    "ai",
+    "python",
+    "microservices",
+    "mongo",
+    "healthcare"
+  ],
+  "author": "vedi.yash@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VediYD/Vespira/issues"
+  },
+  "homepage": "https://github.com/VediYD/Vespira#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mocha": "^10.2.0",
+    "mongo": "^0.1.0",
+    "request": "^2.88.2"
+  }
+}
