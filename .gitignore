@@ -1,6 +1,7 @@
 .env
 /env
 /ai_container/env
+/database/db_files
 
 # Logs
 logs
