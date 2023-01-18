@@ -60,6 +60,15 @@ note: these are not the final set of steps and might change with future updates
 
 ## LINKS
 
+database setup reference links
 1. https://dev.to/sonyarianto/how-to-spin-mongodb-server-with-docker-and-docker-compose-2lef
 2. https://www.bmc.com/blogs/mongodb-docker-container/
 3. https://stackoverflow.com/questions/73582703/mongo-command-not-found-on-mongodb-6-0-docker-container
+4. https://stackoverflow.com/questions/42912755/how-to-create-a-db-for-mongodb-container-on-start-up
+5. https://devconnected.com/how-to-set-upstream-branch-on-git/
+6. https://www.mongodb.com/basics
+7. https://dev.to/jsheridanwells/dockerizing-a-mongo-database-4jf2
+8. https://stackoverflow.com/questions/13937806/mongodb-database-vs-collection
+9. https://gist.github.com/andreasonny83/b24e38b7772a3ea362d8e8d238d5a7bc
+10. https://www.educative.io/answers/how-to-add-folder-to-gitignore
+11. https://onexlab-io.medium.com/docker-mongodb-multiple-databases-62a685c4352a
