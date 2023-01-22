@@ -5,7 +5,7 @@ import path from "path";
 import morgan from "morgan";
 
 // project module imports
-import routes from "./app/models/routes/routes.js";
+import routes from "./app/routes/routes.js";
 
 // describe the port on which the server runs
 var port = process.env.port || 3000;
