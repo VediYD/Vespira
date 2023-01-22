@@ -38,6 +38,7 @@
     "express-session": "^1.17.3",
     "mocha": "^10.2.0",
     "mongo": "^0.1.0",
+    "morgan": "^1.10.0",
     "particle.js": "^1.0.7",
     "request": "^2.88.2"
   }

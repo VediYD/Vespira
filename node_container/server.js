@@ -2,6 +2,7 @@
 import express from "express";
 import cors from "cors";
 import path from "path";
+import morgan from "morgan";
 
 // project module imports
 import routes from "./app/models/routes/routes.js";
@@ -13,6 +14,9 @@ var port = process.env.port || 3000;
 var app = express();
 
 // configuring the app-level middleware
+// logging all requests made
+app.use(morgan("dev"));
+
 // serving of static files through public folder
 app.use(express.static(path.dirname(".") + "/public"));
 
