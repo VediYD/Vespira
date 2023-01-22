@@ -67,6 +67,92 @@
     </nav>
     <main class="main-body">
       <div id="particles-js"></div>
+      <div class="box login-box">
+        <!-- login header -->
+        <div class="row">
+          <div class="center-block"><h2>Login</h2></div>
+        </div>
+        <!-- login with google -->
+        <div class="row">
+          <a
+            class="my-btn my-btn-outline-dark"
+            href="/users/googleauth"
+            role="button"
+            ><img
+              width="20px"
+              style="margin-bottom: 3px; margin-right: 5px"
+              alt="Google sign-in"
+              src="images/google-logo.png"
+            />
+            Continue with Google
+          </a>
+        </div>
+        <!-- login with facebook -->
+        <div class="row">
+          <a
+            class="my-btn my-btn-outline-dark"
+            href="/users/fbauth"
+            role="button"
+            ><img
+              width="20px"
+              style="margin-bottom: 3px; margin-right: 5px"
+              alt="Facebook sign-in"
+              src="images/facebook-logo.png"
+            />
+            Continue with Facebook
+          </a>
+        </div>
+        <!-- or header -->
+        <div class="row">
+          <div class="center-block"><h2>Or</h2></div>
+        </div>
+        <!-- username & password form begins -->
+        <form action="">
+          <!-- asking username -->
+          <div class="input-field">
+            <input type="text" type="email" id="user-id" class="validate" />
+            <label for="user-id"><i>username or email</i></label>
+          </div>
+          <!-- asking password -->
+          <div class="input-field">
+            <input type="password" id="user-pwd" class="validate" />
+            <label for="user-pwd"><i>password</i></label>
+          </div>
+          <a
+            class="btn white-text"
+            id="login-continue"
+            style="float: left; text-align: center; text-transform: none"
+            >Continue</a
+          >
+          <a
+            class="btn white-text"
+            id="login-register"
+            style="float: right; text-align: center; text-transform: none"
+            >Register New User</a
+          >
+        </form>
+        <div id="forgot-password">
+          <a
+            href="/forgot-password"
+            class="blue-text"
+            id="login-register"
+            style="text-transform: none; float: left; padding-top: 40px"
+            ><u>Forgot password?</u></a
+          >
+        </div>
+        <!-- Minified CSS and JS -->
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"
+        ></script>
+      </div>
     </main>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -75,6 +161,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/scripts.js" type="module"></script>
     <script src="js/particle.js" type="module"></script>
   </body>
 </html>
