@@ -3,6 +3,9 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 
+// project module imports
+import routes from "./app/models/routes/routes.js";
+
 // describe the port on which the server runs
 var port = process.env.port || 3000;
 
@@ -21,6 +24,9 @@ app.use(express.urlencoded({ extended: false }));
 
 // simpler security protocols
 app.use(cors());
+
+// using defined routes from routes.js
+app.use("/", routes);
 
 // listen on designated port
 app.listen(port, () => {
