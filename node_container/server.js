@@ -17,8 +17,11 @@ var app = express();
 // logging all requests made
 app.use(morgan("dev"));
 
+// using defined routes from routes.js
+app.use("/", routes);
+
 // serving of static files through public folder
-app.use(express.static(path.dirname(".") + "/public"));
+app.use(express.static(path.dirname(".") + "/app/views"));
 
 // add capability to parse json requests > put parsed info to req.body
 app.use(express.json());
@@ -28,9 +31,6 @@ app.use(express.urlencoded({ extended: false }));
 
 // simpler security protocols
 app.use(cors());
-
-// using defined routes from routes.js
-app.use("/", routes);
 
 // listen on designated port
 app.listen(port, () => {
