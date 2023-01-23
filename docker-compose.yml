@@ -13,3 +13,8 @@ services:
       - MONGO_INITDB_DATABASE=root-db
     volumes:
       - ./database/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+  node:
+    container_name: vespira-node
+    build: ./node_container 
+    ports:
+      - 3000:3000
