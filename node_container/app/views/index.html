@@ -108,15 +108,26 @@
             <div class="center-block"><h2>Or</h2></div>
           </div>
           <!-- username & password form begins -->
-          <form action="/login">
+          <form action="/login" method="post">
             <!-- asking username -->
             <div class="input-field">
-              <input type="text" type="email" id="user-id" class="validate" />
+              <input
+                name="user-id"
+                type="text"
+                type="email"
+                id="user-id"
+                class="validate"
+              />
               <label for="user-id"><i>username or email</i></label>
             </div>
             <!-- asking password -->
             <div class="input-field">
-              <input type="password" id="user-pwd" class="validate" />
+              <input
+                name="pwd"
+                type="password"
+                id="user-pwd"
+                class="validate"
+              />
               <label for="user-pwd"><i>password</i></label>
             </div>
             <button
