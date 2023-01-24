@@ -11,4 +11,14 @@ router.get("/home", (req, res) => {
   res.send("home page");
 });
 
+router.post("/login", (req, res) => {
+  controller.userControllerVerify(req, res, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json({ msg: result });
+    }
+  });
+});
+
 export default router;
