@@ -108,7 +108,7 @@
             <div class="center-block"><h2>Or</h2></div>
           </div>
           <!-- username & password form begins -->
-          <form action="">
+          <form action="/login">
             <!-- asking username -->
             <div class="input-field">
               <input type="text" type="email" id="user-id" class="validate" />
@@ -119,15 +119,18 @@
               <input type="password" id="user-pwd" class="validate" />
               <label for="user-pwd"><i>password</i></label>
             </div>
-            <a
+            <button
               class="btn white-text"
               id="login-continue"
               style="float: left; text-align: center; text-transform: none"
-              >Continue</a
+              type="submit"
             >
+              Continue
+            </button>
             <a
               class="btn white-text"
               id="login-register"
+              href="/register"
               style="float: right; text-align: center; text-transform: none"
               >Register New User</a
             >
