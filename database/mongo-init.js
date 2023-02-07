@@ -23,3 +23,6 @@ maindb.createCollection("PharmacyMaster");
 maindb.createCollection("DoctorMaster");
 maindb.createCollection("PrescriptionsMaster");
 maindb.createCollection("PaymentHistory");
+
+// adding a platform user called dev
+maindb.UserMaster.insert({ username: "dev", password: "devpass" });

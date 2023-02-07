@@ -2,19 +2,23 @@
 import express from "express";
 
 // custom module imports
-// import controller from "../controller/controller.js";
+import controller from "../controller/controller.js";
 
 // initializing router object
 var router = express.Router();
 
-router.get("/login", (req, res) => {
-  console.log("/login");
-  res.send("login page");
+router.get("/home", (req, res) => {
+  res.send("home page");
 });
 
-router.get("/home", (req, res) => {
-  console.log("/home");
-  res.send("home page");
+router.post("/login", (req, res) => {
+  controller.userControllerVerify(req, res, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json({ msg: result });
+    }
+  });
 });
 
 export default router;

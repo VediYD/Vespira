@@ -1,5 +1,6 @@
 // installed imports
 import mongodb from "mongodb";
+import MongoDBStore from "connect-mongodb-session";
 import dotenv from "dotenv";
 
 // loading environment configurations before using them
@@ -41,4 +42,17 @@ clientLog.connect((err) => {
   }
 });
 
-export default { clientMain, clientLog };
+// initializing mongo store
+function createMongoStore(_session) {
+  // configuring mongo store with session object
+  const mongoStore = MongoDBStore(_session);
+
+  // creating a new store instance
+  return new mongoStore({
+    collection: "UserSessions",
+    uri: uriLog,
+    expires: 60 * 60 * 1000,
+  });
+}
+
+export default { clientMain, clientLog, createMongoStore };
