@@ -3,14 +3,18 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 import morgan from "morgan";
+import dotenv from "dotenv";
 import session from "express-session";
 
 // project module imports
 import routes from "./app/routes/routes.js";
 import dbconnections from "./app/dbconnections.js";
 
+// making sure the environment variables defined in .env file are loaded
+dotenv.config();
+
 // describe the port on which the server runs
-var port = process.env.port || 3000;
+var port = process.env.APP_PORT;
 
 // intialize express app object
 var app = express();
