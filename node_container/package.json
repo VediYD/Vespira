@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/VediYD/Vespira#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
     "chai": "^4.3.7",
     "connect-ensure-login": "^0.1.1",

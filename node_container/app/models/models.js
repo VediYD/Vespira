@@ -1,3 +1,5 @@
+import bcrypt from "bcrypt";
+
 // load connection from dbconnections.js
 import dbconnections from "../dbconnections.js";
 
@@ -14,7 +16,7 @@ function verifyUser(userJson, callback) {
     .collection("UserMaster")
     .find({ "username": entered_username })
     .toArray((err, docs) => {
-      if (err) {
+      if (err) { 
         callback(err, null);
       }
       if (!docs.length) {
