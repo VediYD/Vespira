@@ -37,4 +37,24 @@ router.post("/login", (req, res) => {
   });
 });
 
+router.post("/register", (req, res) => {
+  controller.userControllerRegister(req, res, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json({ msg: result });
+    }
+  });
+});
+
+router.post("/registerCheck", (req, res) => {
+  controller.userControllerCheckAvailable(req, res, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json({ msg: result });
+    }
+  });
+});
+
 export default router;
