@@ -9,6 +9,7 @@ import session from "express-session";
 // project module imports
 import routes from "./app/routes/routes.js";
 import dbconnections from "./app/dbconnections.js";
+import bodyParser from "body-parser";
 
 // making sure the environment variables defined in .env file are loaded
 dotenv.config();
@@ -28,6 +29,9 @@ app.use(express.json());
 
 // add capability to parse x-www-form-urlencoded requests > put parsed info to req.body
 app.use(express.urlencoded({ extended: false }));
+
+// using json body parser
+app.use(bodyParser.json({ type: "application/json" }));
 
 // using defined routes from routes.js
 app.use("/", routes);

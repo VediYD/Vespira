@@ -85,6 +85,32 @@ body {
   box-sizing: border-box;
 }
 
+.registration-box1 {
+  position: absolute;
+  top: 50%;
+  left: 17.5%;
+  background: rgba(128, 128, 128, 0.2);
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 80%;
+  padding: 2.5%;
+  border-radius: 10%;
+  box-sizing: border-box;
+}
+
+.registration-box2 {
+  position: absolute;
+  top: 50%;
+  left: 82.5%;
+  background: rgba(128, 128, 128, 0.2);
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 80%;
+  padding: 2.5%;
+  border-radius: 10%;
+  box-sizing: border-box;
+}
+
 .my-btn {
   width: 100%;
   text-transform: none;
