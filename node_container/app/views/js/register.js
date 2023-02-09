@@ -77,7 +77,7 @@ function submitForm() {
 
   var username = $("#user-id").val();
   var email = $("#user-email").val();
-  var password = $("password").val();
+  var password = $("#user-pwd").val();
 
   // if values are empty alert user
   if (username == "") {
@@ -86,73 +86,32 @@ function submitForm() {
   } else if (email == "") {
     alert("please enter email");
     document.getElementById("register-continue").disabled = false;
-  } else if (password == null) {
+  } else if (password == "") {
     alert("please enter password");
     document.getElementById("register-continue").disabled = false;
   } else {
     // prettier-ignore
-    var emailData = JSON.stringify({ "email": email })
-    // console.log(emailData);
-
-    // prettier-ignore
-    var usernameData = JSON.stringify({ "username": username })
-    // console.log(usernameData);
-
-    // check if the user email is taken
-    $.ajax({
-      method: "POST",
-      url: "/registerCheck",
-      contentType: "application/json",
-      data: emailData,
-      success: function (result) {
-        // console.log(result);
-        if (result["msg"] == null) {
-          // do nothing
-        } else if (result["msg"]) {
-          alert("Email Already Taken");
-          document.getElementById("register-continue").disabled = false;
-        } else {
-          // do nothing
-        }
-      },
-    });
-
-    // check if the user id is taken
-    $.ajax({
-      method: "POST",
-      url: "/registerCheck",
-      contentType: "application/json",
-      data: usernameData,
-      success: function (result) {
-        // console.log(result);
-        if (result["msg"] == null) {
-          // do nothing - this should never get triggered
-        } else if (result["msg"]) {
-          alert("Username Already Taken");
-          document.getElementById("register-continue").disabled = false;
-        } else {
-          // do nothing -- empty server response doesnt exist yet
-        }
-      },
-    });
-
-    // prettier-ignore
-    var data = JSON.stringify({
-      "username": username,
-      "email": email,
-      "password": password,
-    });
-    console.log(data);
+    var data = {}
+    data.username = username;
+    data.email = email;
+    data.password = password;
 
     // finally send data for adding new user to appropriate endpoint
     $.ajax({
       method: "POST",
       url: "/register",
-      data: data,
+      contentType: "application/json",
+      data: JSON.stringify(data),
       success: function (result) {
-        // console.log(result);
-        alert(result["msg"]);
-        // window.location.href = "/login";
+        var msg = result["msg"];
+        alert(msg);
+        if (msg == "User Already Exists") {
+          window.location.href = "/register";
+        } else if (msg == "Email Already Taken") {
+          window.location.href = "/register";
+        } else {
+          window.location.href = "/login";
+        }
       },
     });
   }

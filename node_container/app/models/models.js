@@ -67,11 +67,11 @@ async function registerUser(username, email, password) {
   } else {
     // if neither are taken then proceed with user creation
     // need to perform one way hashing and ensure only hash value is stored in the database from register user
-    bcrypt.genSalt(10, function (errSalt, salt) {
+    bcrypt.genSalt(10, (errSalt, salt) => {
       if (errSalt) {
         throw errSalt;
       } else {
-        bcrypt.hash(password, salt, function (errHash, hash) {
+        bcrypt.hash(password, salt, (errHash, hash) => {
           if (errHash) {
             throw errHash;
           } else {

@@ -41,7 +41,8 @@ router.post("/register", (req, res) => {
   console.log("REGISTER BODY", req.body);
   controller.userControllerRegister(req, res, (err, result) => {
     if (err) {
-      console.log(err);
+      console.log(err.message);
+      res.json({ msg: err.message });
     } else {
       res.json({ msg: result });
     }
@@ -49,7 +50,7 @@ router.post("/register", (req, res) => {
 });
 
 router.post("/registerCheck", (req, res) => {
-  // console.log("req", req.body);
+  // console.log("CHECK BODY", req.body);
   controller.userControllerCheckAvailable(req, res, (err, result) => {
     if (err) {
       console.log(err);
