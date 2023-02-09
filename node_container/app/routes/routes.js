@@ -24,7 +24,7 @@ router.get("/forgot-password", (req, res) => {
 
 // separate html for homepage
 router.get("/home", (req, res) => {
-  res.send("home page");
+  res.sendFile("homepage.html", { root: "./app/views" });
 });
 
 router.post("/login", (req, res) => {
@@ -33,7 +33,7 @@ router.post("/login", (req, res) => {
       console.log(err);
     } else {
       if (result) {
-        res.sendFile("homepage.html", { root: "./app/views" });
+        res.redirect("/home");
       } else {
         res.json({ msg: "Incorrect username / password" });
       }
@@ -42,7 +42,7 @@ router.post("/login", (req, res) => {
 });
 
 router.post("/register", (req, res) => {
-  console.log("REGISTER BODY", req.body);
+  // console.log("REGISTER BODY", req.body);
   controller.userControllerRegister(req, res, (err, result) => {
     if (err) {
       console.log(err.message);

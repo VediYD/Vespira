@@ -67,7 +67,99 @@
     </nav>
     <main class="main-body">
       <div id="particles-js"></div>
-      <div class="body-main" id="body-main"></div>
+      <div class="body-main" id="body-main">
+        <div class="box homepage-box">
+          <div class="col column-box1"></div>
+          <div class="col column-box2"></div>
+          <div class="col column-box3"></div>
+          <div class="col column-box4">
+            <!-- first the image -->
+            <div class="row center">
+              <a href="/users/images/view">
+                <img
+                  width="150px"
+                  style="float: center"
+                  alt="profile picture"
+                  src="images/generic-profile-image.png"
+                />
+              </a>
+            </div>
+            <!-- then name -->
+            <div class="row" style="border-bottom: 1px solid gray">
+              <a
+                href="/users/name/edit"
+                class="grey-text"
+                id="user-name"
+                style="font-size: large"
+              >
+                Name:
+              </a>
+            </div>
+            <!-- then usercode -->
+            <div class="row" style="border-bottom: 1px solid gray">
+              <a
+                href="/users/name/edit"
+                class="grey-text"
+                id="user-name"
+                style="font-size: large"
+              >
+                User Code:
+              </a>
+            </div>
+            <!-- then gender -->
+            <div class="row" style="border-bottom: 1px solid gray">
+              <a
+                href="/users/name/edit"
+                class="grey-text"
+                id="user-name"
+                style="font-size: large"
+              >
+                Gender:
+              </a>
+            </div>
+            <!-- then age -->
+            <div class="row" style="border-bottom: 1px solid gray">
+              <a
+                href="/users/name/edit"
+                class="grey-text"
+                id="user-name"
+                style="font-size: large"
+              >
+                Age:
+              </a>
+            </div>
+            <!-- then share button -->
+            <div class="row center">
+              <a href="/users/images/view">
+                <img
+                  width="40px"
+                  style="float: center"
+                  alt="profile picture"
+                  src="images/share-profile.png"
+                />
+              </a>
+            </div>
+            <!-- then take pain assessment button -->
+            <div class="row take-pain-box">
+              <div class="col" style="top: 50%; left: 25%">
+                <a class="red-text" style="font-size: x-large">
+                  Take Pain <br />Assessment</a
+                >
+              </div>
+              <div class="col">
+                <a href="/pain-assessment" style="align-items: center">
+                  <img
+                    src="images/arrow-right.png"
+                    alt="right arrow"
+                    width="80px"
+                    height="30px"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -76,7 +168,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/scripts.js" type="module"></script>
+    <script src="js/homepage.js" type="module"></script>
     <script src="js/particle.js" type="module"></script>
   </body>
 </html>
