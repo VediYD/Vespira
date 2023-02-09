@@ -31,9 +31,9 @@ function verifyUser(username, password, callback) {
         
         // check if passwords match
         if (pwdCheck) {
-          callback(null, "password is correct");
+          callback(null, true);
         } else {
-          callback(null, "password is incorrect");
+          callback(null, false);
         }
       }
     });

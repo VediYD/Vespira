@@ -32,7 +32,11 @@ router.post("/login", (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.json({ msg: result });
+      if (result) {
+        res.sendFile("homepage.html", { root: "./app/views" });
+      } else {
+        res.json({ msg: "Incorrect username / password" });
+      }
     }
   });
 });
