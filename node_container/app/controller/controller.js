@@ -12,13 +12,15 @@ function userControllerVerify(req, res, callback) {
   models.verifyUser(username, password, callback);
 }
 
-function userControllerRegister(req, res, callback) {
+async function userControllerRegister(req, res, callback) {
   var username = req.body.username;
   var email = req.body.email;
   var password = req.body.password;
 
+  // console.log(username, password, email);
+
   try {
-    models.registerUser(username, email, password);
+    await models.registerUser(username, email, password);
     callback(null, "user registered successfully");
   } catch (err) {
     callback(err, null);
@@ -27,7 +29,6 @@ function userControllerRegister(req, res, callback) {
 
 function tryCheck(reqBody, _checkField, _checkValue, callback) {
   try {
-    console.log(reqBody);
     models.checkUser(_checkField, _checkValue, (result) => {
       if (result) {
         callback(null, true);
@@ -41,20 +42,17 @@ function tryCheck(reqBody, _checkField, _checkValue, callback) {
 }
 
 function userControllerCheckAvailable(req, res, callback) {
-  // console.log(req.body);
+  // console.log("BODY", req.body);
   if (Object.keys(req.body).length == 0) {
     // console.log("nothing entered yet");
     callback(null, false);
   } else {
     if (Object.keys(req.body).includes("username")) {
-      // console.log("not yet");
       // check if username exists
       var checkField = "username";
       var checkValue = req.body.username;
-
       tryCheck(req.body, checkField, checkValue, callback);
     } else if (Object.keys(req.body).includes("email")) {
-      // console.log("yet");
       // check if email exists
       var checkField = "email";
       var checkValue = req.body.email;

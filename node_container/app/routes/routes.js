@@ -38,6 +38,7 @@ router.post("/login", (req, res) => {
 });
 
 router.post("/register", (req, res) => {
+  console.log("REGISTER BODY", req.body);
   controller.userControllerRegister(req, res, (err, result) => {
     if (err) {
       console.log(err);
@@ -48,6 +49,7 @@ router.post("/register", (req, res) => {
 });
 
 router.post("/registerCheck", (req, res) => {
+  // console.log("req", req.body);
   controller.userControllerCheckAvailable(req, res, (err, result) => {
     if (err) {
       console.log(err);

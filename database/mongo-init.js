@@ -25,4 +25,8 @@ maindb.createCollection("PrescriptionsMaster");
 maindb.createCollection("PaymentHistory");
 
 // adding a platform user called dev
-maindb.UserMaster.insert({ username: "dev", password: "devpass" });
+maindb.UserMaster.insert({
+  username: "dev",
+  password: "devpass",
+  email: "dev@vespira.com",
+});

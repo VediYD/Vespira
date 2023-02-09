@@ -24,7 +24,7 @@ function verifyUser(username, password, callback) {
         }
         else {
           // for non dev check with bcrypt
-          var pwdCheck = await bcrypt.compare(password, docs[0]["password"])
+          var pwdCheck = await bcrypt.compare(password, docs[0]["password"], ()=>{})
         }
 
         // check if passwords match
@@ -41,43 +41,54 @@ function verifyUser(username, password, callback) {
 
 // create new user / register user
 async function registerUser(username, email, password) {
-  const _test = await dbconnections.clientMain
+  // console.log(username, email, password);
+
+  // prettier-ignore
+  var userCheck = await dbconnections.clientMain
     .db()
     .collection("UserMaster")
-    .findOne({ username: username });
-  console.log(_test);
-  // remember to check if the username is already taken
-  // prettier-ignore
-  if (
-    _test
-  ) {
-    console.log('Alert?')
-    // alert("UserName Already Taken");
-  }
+    .findOne({ "username": username });
 
   // prettier-ignore
-  if (
-    await dbconnections.clientMain
-      .db()
-      .collection("UserMaster")
-      .findOne({ "email": email })
-  ) {
-    console.log("UserEmail Already Taken");
-  }
-
-  // need to perform one way hashing and ensure only hash value is stored in the database from register user
-  const hashedPassword = await bcrypt.hash(password, 10);
-
-  // prettier-ignore
-  dbconnections.clientMain
+  var emailCheck = await dbconnections.clientMain
     .db()
     .collection("UserMaster")
-    .insertOne({
-      'id': Date.now().toString(),
-      "username": username,
-      "email": email,
-      "password": hashedPassword
-    })
+    .findOne({ "email": email });
+
+  // console.log(emailCheck);
+  // console.log(userCheck);
+
+  if (userCheck) {
+    // first check if the username is already taken
+    throw new Error("User Already Exists");
+  } else if (emailCheck) {
+    // then check if the email id is taken
+    throw new Error("Email Already Taken");
+  } else {
+    // if neither are taken then proceed with user creation
+    // need to perform one way hashing and ensure only hash value is stored in the database from register user
+    bcrypt.genSalt(10, function (errSalt, salt) {
+      if (errSalt) {
+        throw errSalt;
+      } else {
+        bcrypt.hash(password, salt, function (errHash, hash) {
+          if (errHash) {
+            throw errHash;
+          } else {
+            console.log(password, hash);
+
+            // update db
+            dbconnections.clientMain.db().collection("UserMaster").insertOne({
+              id: Date.now().toString(),
+              username: username,
+              email: email,
+              password: hash,
+            });
+          }
+        });
+      }
+    });
+  }
 }
 
 async function checkUser(checkField, checkValue, callback) {
