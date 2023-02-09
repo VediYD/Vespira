@@ -24,9 +24,11 @@ function verifyUser(username, password, callback) {
         }
         else {
           // for non dev check with bcrypt
-          var pwdCheck = await bcrypt.compare(password, docs[0]["password"], ()=>{})
+          var pwdCheck = await bcrypt.compare(password, docs[0]["password"])
         }
 
+        console.log(docs[0]["password"], password, pwdCheck)
+        
         // check if passwords match
         if (pwdCheck) {
           callback(null, "password is correct");
