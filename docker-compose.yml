@@ -1,4 +1,4 @@
-version: '3.7'
+version: "3.7"
 
 services:
   mongo:
@@ -17,13 +17,13 @@ services:
       - api-network
   node:
     container_name: vespira-node
-    build: ./node_container 
+    build: ./node_container
     depends_on:
       - mongo
     ports:
       - 3000:3000
     networks:
       - api-network
-networks: 
+networks:
   api-network:
     driver: bridge
