@@ -27,6 +27,11 @@ router.get("/home", (req, res) => {
   res.sendFile("homepage.html", { root: "./app/views" });
 });
 
+// separate html for homepage
+router.get("/pain-assessment", (req, res) => {
+  res.sendFile("painassessment.html", { root: "./app/views" });
+});
+
 router.post("/login", (req, res) => {
   controller.userControllerVerify(req, res, (err, result) => {
     if (err) {
