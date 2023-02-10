@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Vespira</title>
+
+    <meta name="description" content="Vespira Main index.html" />
+    <meta name="author" content="SitePoint" />
+
+    <meta property="og:title" content="Vespira" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:description" content="Vespira Main index.html" />
+
+    <link rel="shortcut icon" href="#" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Caveat"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-center" role="navigation">
+        <div class="nav-wrapper navbar-size">
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li>
+              <a target="_blank" href="#" class="vespira-font"
+                >Vesp<span style="color: black">i</span>ra.com</a
+              >
+            </li>
+          </ul>
+          <a href="#" class="logo"
+            ><img class="vespira-logo rotate" src="images/VespiraLogo.png"
+          /></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a href="/home"
+                ><img
+                  class="functional-icon"
+                  src="images/home-icon.png"
+                  alt="home"
+                  href="/home"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="/login"
+                ><img
+                  class="functional-icon"
+                  src="images/logout-icon.png"
+                  alt="logout"
+              /></a>
+            </li>
+            <li>
+              <a target="_blank" href="/about/faq" class="nav-font">FAQ</a>
+            </li>
+            <li>
+              <a target="_blank" href="/about/aboutus" class="nav-font"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="main-body">
+      <div id="particles-js"></div>
+      <div class="body-main" id="body-main">
+        <div class="box painpage-box">
+          <div class="col painpage-mainbox-left">
+            <div class="row">
+              <img
+                class="image-box"
+                id="image-box"
+                style="display: none"
+                src=""
+              />
+              <video
+                class="row video-box"
+                id="video-feed"
+                playsinline
+                autoplay
+              ></video>
+            </div>
+            <div
+              class="row drag-n-drop-box"
+              id="drag-n-drop-options"
+              style="display: none; border: 1px solid"
+            >
+              <a class="black-text" style="font-size: large">
+                <center>
+                  <br />Click to Upload File<br /><br />OR<br /><br />
+                  Drop File Here
+                </center>
+              </a>
+            </div>
+            <div
+              class="row drag-n-drop-box"
+              id="drop-options"
+              style="display: none; border: 1px solid"
+            >
+              <a class="black-text" style="font-size: large">
+                <center>
+                  <br /><br /><br />
+                  Drop File Here
+                </center>
+              </a>
+            </div>
+            <div class="row drag-n-drop-box" id="drag-n-drop-box">
+              <input
+                type="file"
+                accept="image/**"
+                style="display: none"
+                id="img-file"
+              />
+              <img
+                class="upload"
+                id="upload-icon"
+                src="images/upload-icon.png"
+              />
+            </div>
+          </div>
+          <div class="col painpage-mainbox-right">
+            <div
+              class="row pain-score-row"
+              style="text-align: center; vertical-align: top"
+            >
+              <a id="pain-score" style="font-size: x-large; color: darkred"
+                >PAIN SCORE<br />-.-/10</a
+              >
+            </div>
+            <div class="row">
+              <a
+                class="btn mutliline-btn"
+                id="request-prescription"
+                style="float: left; text-align: center"
+              >
+                REQUEST <br />PRESCRIPTION
+              </a>
+              <a
+                class="btn mutliline-btn"
+                id="request-preapp-prescription"
+                style="float: right; text-align: center"
+              >
+                VIEW PREAPPROVED<br />PRESCRIPTIONS
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/painassessment.js" type="module"></script>
+    <script src="js/particle.js" type="module"></script>
+  </body>
+</html>

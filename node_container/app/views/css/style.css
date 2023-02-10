@@ -81,7 +81,7 @@ body {
   transform: translate(-50%, -50%);
   width: 30%;
   padding: 2.5%;
-  border-radius: 10%;
+  border-radius: 5%;
   box-sizing: border-box;
 }
 
@@ -94,7 +94,7 @@ body {
   width: 30%;
   height: 80%;
   padding: 2.5%;
-  border-radius: 10%;
+  border-radius: 5%;
   box-sizing: border-box;
 }
 
@@ -107,7 +107,7 @@ body {
   width: 30%;
   height: 80%;
   padding: 2.5%;
-  border-radius: 10%;
+  border-radius: 5%;
   box-sizing: border-box;
 }
 
@@ -120,7 +120,7 @@ body {
   width: 95%;
   height: 85%;
   padding: 2.5%;
-  border-radius: 10%;
+  border-radius: 5%;
   box-sizing: border-box;
 }
 
@@ -133,7 +133,7 @@ body {
   width: 20%;
   height: 95%;
   padding: 2.5%;
-  border-radius: 10%;
+  border-radius: 5%;
   box-sizing: border-box;
 }
 
@@ -146,7 +146,7 @@ body {
   width: 20%;
   height: 95%;
   padding: 2.5%;
-  border-radius: 10%;
+  border-radius: 5%;
   box-sizing: border-box;
 }
 
@@ -159,7 +159,7 @@ body {
   width: 20%;
   height: 95%;
   padding: 2.5%;
-  border-radius: 10%;
+  border-radius: 5%;
   box-sizing: border-box;
 }
 
@@ -172,7 +172,7 @@ body {
   width: 30%;
   height: 95%;
   padding: 2.5%;
-  border-radius: 10%;
+  border-radius: 5%;
   box-sizing: border-box;
 }
 
@@ -185,8 +185,102 @@ body {
   width: 70%;
   height: 15%;
   padding: 2.5%;
-  border-radius: 10%;
+  border-radius: 5%;
   box-sizing: border-box;
+}
+
+.painpage-box {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  background: rgba(128, 128, 128, 0.2);
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 85%;
+  padding: 2.5%;
+  border-radius: 5%;
+  box-sizing: border-box;
+}
+
+.painpage-mainbox-left {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 95%;
+  padding: 2.5%;
+  border-radius: 5%;
+  box-sizing: border-box;
+}
+
+.painpage-mainbox-right {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 35%;
+  padding: 2.5%;
+  border-radius: 5%;
+  box-sizing: border-box;
+}
+
+.video-box {
+  position: absolute;
+  top: 30%;
+  left: 52%;
+  background: rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 50%;
+  border-radius: 5%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.image-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: 50%;
+  border-radius: 5%;
+  box-sizing: border-box;
+}
+
+.drag-n-drop-box {
+  position: absolute;
+  top: 77%;
+  left: 52%;
+  background: rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 40%;
+  border-radius: 1%;
+  box-sizing: border-box;
+  border-style: dashed;
+  border-width: 2px;
+  align-items: center;
+}
+
+.upload {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 40%;
+  left: 47%;
+}
+
+.functional-icon {
+  height: 30px;
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .my-btn {
@@ -208,6 +302,18 @@ body {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.mutliline-btn {
+  line-height: 1.5;
+  font-size: 1rem;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  height: auto;
 }
 .my-btn:focus,
 .my-btn:hover {
