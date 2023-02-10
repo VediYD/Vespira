@@ -50,3 +50,32 @@ photo.addEventListener("click", () => {
     video_feed.style.display = "block";
   }, 1000);
 });
+
+const dragNDropBox = document.getElementById("drag-n-drop-box");
+const dragNDropOptions = document.getElementById("drag-n-drop-options");
+const dropOptions = document.getElementById("drop-options");
+
+dragNDropOptions.addEventListener("click", () => {
+  $("#img-file").trigger("click");
+});
+dragNDropBox.addEventListener("mouseover", () => {
+  document.getElementById("drag-n-drop-options").style.display = "block";
+  document.getElementById("drag-n-drop-box").style.display = "none";
+});
+dragNDropOptions.addEventListener("mouseleave", () => {
+  document.getElementById("drag-n-drop-options").style.display = "none";
+  document.getElementById("drag-n-drop-box").style.display = "block";
+});
+dragNDropBox.addEventListener("dragover", () => {
+  document.getElementById("drag-n-drop-box").style.display = "none";
+  document.getElementById("drop-options").style.display = "block";
+});
+dropOptions.addEventListener("dragleave", () => {
+  document.getElementById("drag-n-drop-box").style.display = "block";
+  document.getElementById("drop-options").style.display = "none";
+});
+dragNDropBox.addEventListener("drop", () => {
+  alert("transferFile()");
+  document.getElementById("drag-n-drop-box").style.display = "block";
+  document.getElementById("drop-options").style.display = "none";
+});

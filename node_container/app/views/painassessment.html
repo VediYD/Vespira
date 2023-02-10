@@ -70,21 +70,54 @@
       <div class="body-main" id="body-main">
         <div class="box painpage-box">
           <div class="col painpage-mainbox-left">
-            <!-- <canvas class="row video-box" id="img-canvas"></canvas> -->
-            <img
-              class="image-box"
-              id="image-box"
-              style="display: none"
-              src=""
-            />
-            <video
-              class="row video-box"
-              id="video-feed"
-              playsinline
-              autoplay
-            ></video>
+            <div class="row">
+              <img
+                class="image-box"
+                id="image-box"
+                style="display: none"
+                src=""
+              />
+              <video
+                class="row video-box"
+                id="video-feed"
+                playsinline
+                autoplay
+              ></video>
+            </div>
+            <div
+              class="row drag-n-drop-box"
+              id="drag-n-drop-options"
+              style="display: none; border: 1px solid"
+            >
+              <a class="black-text" style="font-size: large">
+                <center>
+                  <br />Click to Upload File<br /><br />OR<br /><br />
+                  Drop File Here
+                </center>
+              </a>
+            </div>
+            <div
+              class="row drag-n-drop-box"
+              id="drop-options"
+              style="display: none; border: 1px solid"
+            >
+              <a class="black-text" style="font-size: large">
+                <center>
+                  <br /><br /><br />
+                  Drop File Here
+                </center>
+              </a>
+            </div>
+            <div class="row drag-n-drop-box" id="drag-n-drop-box">
+              <input type="file" style="display: none" id="img-file" />
+              <img
+                class="upload"
+                id="upload-icon"
+                src="images/upload-icon.png"
+              />
+            </div>
           </div>
-          <div class="col painpage-mainbox-right" style="display: none"></div>
+          <div class="col painpage-mainbox-right"></div>
         </div>
       </div>
     </main>

@@ -253,6 +253,29 @@ body {
   box-sizing: border-box;
 }
 
+.drag-n-drop-box {
+  position: absolute;
+  top: 77%;
+  left: 52%;
+  background: rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 40%;
+  border-radius: 1%;
+  box-sizing: border-box;
+  border-style: dashed;
+  border-width: 2px;
+  align-items: center;
+}
+
+.upload {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 40%;
+  left: 47%;
+}
+
 .my-btn {
   width: 100%;
   text-transform: none;
