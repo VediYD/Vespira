@@ -118,3 +118,15 @@ function changeImage(input) {
     photo.width = photo.style.display = "block";
   }
 }
+
+document
+  .getElementById("request-prescription")
+  .addEventListener("click", () => {
+    alert("prescription request recieved");
+  });
+
+document
+  .getElementById("request-preapp-prescription")
+  .addEventListener("click", () => {
+    alert("preapproved prescriptions have been emailed to test@gmail.com");
+  });
