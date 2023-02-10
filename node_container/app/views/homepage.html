@@ -87,9 +87,95 @@
       <div id="particles-js"></div>
       <div class="body-main" id="body-main">
         <div class="box homepage-box">
-          <div class="col column-box1"></div>
-          <div class="col column-box2"></div>
-          <div class="col column-box3"></div>
+          <div class="col column-box1">
+            <table class="highlight">
+              <thead>
+                <tr>
+                  <th><center>Order History</center></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Order ID: <br />Order Date: <br />Order Status:</td>
+                </tr>
+                <tr>
+                  <td>Order ID: <br />Order Date: <br />Order Status:</td>
+                </tr>
+                <tr>
+                  <td>Order ID: <br />Order Date: <br />Order Status:</td>
+                </tr>
+                <tr>
+                  <td>Order ID: <br />Order Date: <br />Order Status:</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col column-box2">
+            <table class="highlight">
+              <thead>
+                <tr>
+                  <th><center>Prescription History</center></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Prescription ID: <br />Prescription Date: <br />Pain History
+                    ID:
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Prescription ID: <br />Prescription Date: <br />Pain History
+                    ID:
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Prescription ID: <br />Prescription Date: <br />Pain History
+                    ID:
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Prescription ID: <br />Prescription Date: <br />Pain History
+                    ID:
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col column-box3">
+            <table class="highlight">
+              <thead>
+                <tr>
+                  <th><center>Pain History</center></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Pain History ID: <br />Evaluation Date: <br />Pain Score:
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Pain History ID: <br />Evaluation Date: <br />Pain Score:
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Pain History ID: <br />Evaluation Date: <br />Pain Score:
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Pain History ID: <br />Evaluation Date: <br />Pain Score:
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <div class="col column-box4">
             <!-- first the image -->
             <div class="row center">
@@ -110,7 +196,7 @@
                 id="user-name"
                 style="font-size: large"
               >
-                Name:
+                Name: <b>test-user</b>
               </a>
             </div>
             <!-- then usercode -->
@@ -121,7 +207,7 @@
                 id="user-name"
                 style="font-size: large"
               >
-                User Code:
+                User Code: <b>PID00001123</b>
               </a>
             </div>
             <!-- then gender -->
@@ -132,7 +218,7 @@
                 id="user-name"
                 style="font-size: large"
               >
-                Gender:
+                Gender: <b>MALE</b>
               </a>
             </div>
             <!-- then age -->
@@ -143,12 +229,12 @@
                 id="user-name"
                 style="font-size: large"
               >
-                Age:
+                Age: <b>26</b>
               </a>
             </div>
             <!-- then share button -->
             <div class="row center">
-              <a href="/users/images/view">
+              <a href="/users/share">
                 <img
                   width="40px"
                   style="float: center"
@@ -158,14 +244,21 @@
               </a>
             </div>
             <!-- then take pain assessment button -->
-            <div class="row take-pain-box">
+            <div
+              class="row take-pain-box"
+              onclick='document.getElementById("take-pain-btn").click()'
+            >
               <div class="col" style="top: 50%; left: 25%">
                 <a class="red-text" style="font-size: x-large">
                   Take Pain <br />Assessment</a
                 >
               </div>
               <div class="col">
-                <a href="/pain-assessment" style="align-items: center">
+                <a
+                  id="take-pain-btn"
+                  href="/pain-assessment"
+                  style="align-items: center"
+                >
                   <img
                     src="images/arrow-right.png"
                     alt="right arrow"

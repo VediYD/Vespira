@@ -116,13 +116,14 @@ function changeImage(input) {
       video_feed.style.display = "none";
     }, 1000);
     photo.width = photo.style.display = "block";
+    assessPain();
   }
 }
 
 document
   .getElementById("request-prescription")
   .addEventListener("click", () => {
-    alert("prescription request recieved");
+    alert("prescription request recieved, check back in a few hours :)");
   });
 
 document
