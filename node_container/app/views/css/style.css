@@ -276,6 +276,13 @@ body {
   left: 47%;
 }
 
+.functional-icon {
+  height: 30px;
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .my-btn {
   width: 100%;
   text-transform: none;
