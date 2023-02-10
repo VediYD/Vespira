@@ -109,7 +109,12 @@
               </a>
             </div>
             <div class="row drag-n-drop-box" id="drag-n-drop-box">
-              <input type="file" style="display: none" id="img-file" />
+              <input
+                type="file"
+                accept="image/**"
+                style="display: none"
+                id="img-file"
+              />
               <img
                 class="upload"
                 id="upload-icon"
@@ -117,7 +122,32 @@
               />
             </div>
           </div>
-          <div class="col painpage-mainbox-right"></div>
+          <div class="col painpage-mainbox-right">
+            <div
+              class="row pain-score-row"
+              style="text-align: center; vertical-align: top"
+            >
+              <a id="pain-score" style="font-size: x-large; color: darkred"
+                >PAIN SCORE<br />-.-/10</a
+              >
+            </div>
+            <div class="row">
+              <a
+                class="btn mutliline-btn"
+                id="request-prescription"
+                style="float: left; text-align: center"
+              >
+                REQUEST <br />PRESCRIPTION
+              </a>
+              <a
+                class="btn mutliline-btn"
+                id="request-prescription"
+                style="float: right; text-align: center"
+              >
+                VIEW PREAPPROVED<br />PRESCRIPTIONS
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
